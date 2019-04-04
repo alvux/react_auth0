@@ -8,8 +8,10 @@ class Home extends Component {
 
   getEmail() {
     let idToken = this.props.auth.getIdToken();
+    
     return jwtDecode(idToken).email;
   }
+
   render() {
     const { isAuthenticated } = this.props.auth;
 
